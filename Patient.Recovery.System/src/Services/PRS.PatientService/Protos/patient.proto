@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "PRS.PatientService.Grpc";
+
+service PatientGrpc {
+  rpc CheckPatientExists(PatientRequest) returns (PatientExistsResponse);
+}
+
+message PatientRequest {
+  int32 patientId = 1;
+}
+
+message PatientExistsResponse {
+  bool exists = 1;
+}

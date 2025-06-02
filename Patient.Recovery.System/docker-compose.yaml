@@ -1,0 +1,287 @@
+services:
+    # SQL Server Database
+    sqlserver:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        container_name: sqlserver
+        restart: always
+        environment:
+            - ACCEPT_EULA=Y
+            - SA_PASSWORD=Y0urP@ssw0rd!23
+            - MSSQL_PID=Express
+        ports:
+            - "11434:1433"
+        volumes:
+            - sqlserver_data:/var/opt/mssql
+        networks:
+            - patientrecovery-network
+        healthcheck:
+            test:
+                [
+                    "CMD-SHELL",
+                    "timeout 1 bash -c '</dev/tcp/localhost/1433' || exit 1",
+                ]
+            interval: 10s
+            retries: 10
+            start_period: 30s
+            timeout: 5s
+
+    # API Gateway
+    api-gateway:
+        build:
+            context: .
+            dockerfile: src/ApiGateway/PRS.ApiGateway/Dockerfile
+        restart: always
+        container_name: api-gateway
+        ports:
+            - "7000:8080"
+            - "7001:8081"
+        depends_on:
+            - patient-service
+            - monitoring-service
+        networks:
+            - patientrecovery-network
+
+    # Patient Service
+    patient-service:
+        build:
+            context: .
+            dockerfile: src/Services/PRS.PatientService/Dockerfile
+        restart: always
+        container_name: patient-service
+        environment:
+            - ConnectionStrings__DefaultConnection=Server=patient_src_db,1433;Database=PatientRecoveryDB_Patients;User Id=sa;Password=Y0urP@ssw0rd!23;Trust Server Certificate=True;
+        ports:
+            - "7010:8080"
+            - "7011:8081"
+        depends_on:
+            patient_src_db:
+                condition: service_healthy
+        networks:
+            - patientrecovery-network
+
+    patient_src_db:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        restart: always
+        environment:
+            - SA_PASSWORD=Y0urP@ssw0rd!23
+            - ACCEPT_EULA=Y
+            - MSSQL_PID=Express
+        ports:
+            - "5435:1433"
+        volumes:
+            - ps_db_data:/var/opt/mssql
+        networks:
+            - patientrecovery-network
+        healthcheck:
+            test:
+                [
+                    "CMD-SHELL",
+                    "timeout 1 bash -c '</dev/tcp/localhost/1433' || exit 1",
+                ]
+            interval: 10s
+            retries: 10
+            start_period: 30s
+            timeout: 5s
+
+    # Monitoring Service
+    monitoring-service:
+        build:
+            context: .
+            dockerfile: src/Services/PRS.MonitoringService/Dockerfile
+        restart: always
+        container_name: monitoring-service
+        environment:
+            - ConnectionStrings__DefaultConnection=Server=monitoring_src_db,1433;Database=PatientRecoveryDB_Monitoring;User Id=sa;Password=Y0urP@ssw0rd!23;Trust Server Certificate=True;
+        ports:
+            - "7020:8080"
+            - "7021:8081"
+        depends_on:
+            monitoring_src_db:
+                condition: service_healthy
+        networks:
+            - patientrecovery-network
+
+    monitoring_src_db:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        restart: always
+        environment:
+            - SA_PASSWORD=Y0urP@ssw0rd!23
+            - ACCEPT_EULA=Y
+            - MSSQL_PID=Express
+        ports:
+            - "5436:1433"
+        volumes:
+            - ms_db_data:/var/opt/mssql
+        networks:
+            - patientrecovery-network
+        healthcheck:
+            test:
+                [
+                    "CMD-SHELL",
+                    "timeout 1 bash -c '</dev/tcp/localhost/1433' || exit 1",
+                ]
+            interval: 10s
+            retries: 10
+            start_period: 30s
+            timeout: 5s
+
+    # Diagnosis Service
+    diagnosis-service:
+        build:
+            context: .
+            dockerfile: src/Services/PRS.DiagnoosisService/Dockerfile
+        restart: always
+        container_name: diagnosis-service
+        environment:
+            - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=PatientRecoveryDB_Diagnosis;User Id=sa;Password=Y0urP@ssw0rd!23;Trust Server Certificate=True;
+        ports:
+            - "7030:8080"
+            - "7031:8081"
+        depends_on:
+            diagnosis_src_db:
+                condition: service_healthy
+        networks:
+            - patientrecovery-network
+
+    diagnosis_src_db:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        restart: always
+        environment:
+            - SA_PASSWORD=Y0urP@ssw0rd!23
+            - ACCEPT_EULA=Y
+            - MSSQL_PID=Express
+        ports:
+            - "5437:1433"
+        volumes:
+            - ds_db_data:/var/opt/mssql
+        networks:
+            - patientrecovery-network
+        healthcheck:
+            test:
+                [
+                    "CMD-SHELL",
+                    "timeout 1 bash -c '</dev/tcp/localhost/1433' || exit 1",
+                ]
+            interval: 10s
+            retries: 10
+            start_period: 30s
+            timeout: 5s
+
+    # Rehabilitation Service
+    rehabilitation-service:
+        build:
+            context: .
+            dockerfile: src/Services/PRS.RehabilitationService/Dockerfile
+        restart: always
+        container_name: rehabilitation-service
+        environment:
+            - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=PatientRecoveryDB_Rehabilitation;User Id=sa;Password=Y0urP@ssw0rd!23;Trust Server Certificate=True;
+        ports:
+            - "7040:8080"
+            - "7041:8081"
+        depends_on:
+            rehabilitation_src_db:
+                condition: service_healthy
+        networks:
+            - patientrecovery-network
+
+    rehabilitation_src_db:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        restart: always
+        environment:
+            - SA_PASSWORD=Y0urP@ssw0rd!23
+            - ACCEPT_EULA=Y
+            - MSSQL_PID=Express
+        ports:
+            - "5438:1433"
+        volumes:
+            - rb_db_data:/var/opt/mssql
+        networks:
+            - patientrecovery-network
+        healthcheck:
+            test:
+                [
+                    "CMD-SHELL",
+                    "timeout 1 bash -c '</dev/tcp/localhost/1433' || exit 1",
+                ]
+            interval: 10s
+            retries: 10
+            start_period: 30s
+            timeout: 5s
+
+    # Notification Service
+    notification-service:
+        build:
+            context: .
+            dockerfile: src/Services/PRS.NotificationService/Dockerfile
+        container_name: notification-service
+        restart: always
+        environment:
+            - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=PatientRecoveryDB_Notifications;User Id=sa;Password=Y0urP@ssw0rd!23;Trust Server Certificate=True;
+        ports:
+            - "7050:8080"
+            - "7051:8081"
+        depends_on:
+            - sqlserver
+        networks:
+            - patientrecovery-network
+
+    auth-service:
+        build:
+            context: .
+            dockerfile: src/Services/PRS.AuthService/Dockerfile
+        container_name: auth-service
+        restart: always
+        environment:
+            - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=PatientRecoveryDB_Auth;User Id=sa;Password=Y0urP@ssw0rd!23;Trust Server Certificate=True;
+        ports:
+            - "7060:8080"
+            - "7061:8081"
+        depends_on:
+            - sqlserver
+        networks:
+            - patientrecovery-network
+
+    rabbitmq:
+        image: rabbitmq:3-management
+        container_name: rabbitmq
+        hostname: host-rabbitmq
+        restart: always
+        ports:
+            - "5672:5672"
+            - "15672:15672"
+        environment:
+            RABBITMQ_DEFAULT_USER: guest
+            RABBITMQ_DEFAULT_PASS: guest
+        volumes:
+            - rabbitmq-data:/var/lib/rabbitmq
+        networks:
+            - patientrecovery-network
+
+    # Web Frontend (Nginx)
+    web-frontend:
+        image: nginx:alpine
+        container_name: patientrecovery-web
+        ports:
+            - "8080:8080"
+            - "8081:8081"
+        restart: always
+        volumes:
+            - ../src/Web:/usr/share/nginx/html
+            - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+        depends_on:
+            - api-gateway
+        networks:
+            - patientrecovery-network
+
+volumes:
+    sqlserver_data:
+    ms_db_data:
+    ps_db_data:
+    ds_db_data:
+    rb_db_data:
+    rabbitmq-data:
+
+networks:
+    patientrecovery-network:
+        driver: bridge

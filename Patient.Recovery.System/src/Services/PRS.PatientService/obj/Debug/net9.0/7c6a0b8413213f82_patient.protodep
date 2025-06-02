@@ -1,0 +1,2 @@
+obj\Debug\net9.0/Patient.cs \
+obj\Debug\net9.0/PatientGrpc.cs: ../../Shared/PRS.Shared.GrpcContracts/patient.proto

@@ -1,0 +1,172 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Dotnet-Projects\\Patient.Recovery.System\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|E:\\Dotnet-Projects\\Patient.Recovery.System\\docker-compose.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|solutionrelative:docker-compose.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49CA8967-B6AE-4C40-984A-C7BF22FF7444}|src\\Services\\PRS.RehabilitationService\\PRS.RehabilitationService.csproj|e:\\dotnet-projects\\patient.recovery.system\\src\\services\\prs.rehabilitationservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{49CA8967-B6AE-4C40-984A-C7BF22FF7444}|src\\Services\\PRS.RehabilitationService\\PRS.RehabilitationService.csproj|solutionrelative:src\\services\\prs.rehabilitationservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29ED1F9A-B648-4582-8930-B390655595B8}|src\\Services\\PRS.PatientService\\PRS.PatientService.csproj|e:\\dotnet-projects\\patient.recovery.system\\src\\services\\prs.patientservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{29ED1F9A-B648-4582-8930-B390655595B8}|src\\Services\\PRS.PatientService\\PRS.PatientService.csproj|solutionrelative:src\\services\\prs.patientservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19CADE51-D09A-4DF8-B0AE-41F16054C9C4}|src\\Services\\PRS.NotificationService\\PRS.NotificationService.csproj|e:\\dotnet-projects\\patient.recovery.system\\src\\services\\prs.notificationservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{19CADE51-D09A-4DF8-B0AE-41F16054C9C4}|src\\Services\\PRS.NotificationService\\PRS.NotificationService.csproj|solutionrelative:src\\services\\prs.notificationservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B303962-DA5E-4A68-9D2F-93C5BF93C77A}|src\\Services\\PRS.MonitoringService\\PRS.MonitoringService.csproj|e:\\dotnet-projects\\patient.recovery.system\\src\\services\\prs.monitoringservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0B303962-DA5E-4A68-9D2F-93C5BF93C77A}|src\\Services\\PRS.MonitoringService\\PRS.MonitoringService.csproj|solutionrelative:src\\services\\prs.monitoringservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0953870D-1B03-47AD-8FE1-C26FE62FA5B7}|src\\Services\\PRS.DiagnosisService\\PRS.DiagnosisService.csproj|e:\\dotnet-projects\\patient.recovery.system\\src\\services\\prs.diagnosisservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0953870D-1B03-47AD-8FE1-C26FE62FA5B7}|src\\Services\\PRS.DiagnosisService\\PRS.DiagnosisService.csproj|solutionrelative:src\\services\\prs.diagnosisservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{674C2D0A-BAFC-4FD0-8B8D-D22BB03D2C82}|src\\Services\\PRS.AuthService\\PRS.AuthService.csproj|e:\\dotnet-projects\\patient.recovery.system\\src\\services\\prs.authservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{674C2D0A-BAFC-4FD0-8B8D-D22BB03D2C82}|src\\Services\\PRS.AuthService\\PRS.AuthService.csproj|solutionrelative:src\\services\\prs.authservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B184A1B4-7495-40C0-A41A-160EF2ED9014}|src\\ApiGateway\\PRS.ApiGateway\\PRS.ApiGateway.csproj|e:\\dotnet-projects\\patient.recovery.system\\src\\apigateway\\prs.apigateway\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B184A1B4-7495-40C0-A41A-160EF2ED9014}|src\\ApiGateway\\PRS.ApiGateway\\PRS.ApiGateway.csproj|solutionrelative:src\\apigateway\\prs.apigateway\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "docker-compose.yaml",
+              "DocumentMoniker": "E:\\Dotnet-Projects\\Patient.Recovery.System\\docker-compose.yaml",
+              "RelativeDocumentMoniker": "docker-compose.yaml",
+              "ToolTip": "E:\\Dotnet-Projects\\Patient.Recovery.System\\docker-compose.yaml",
+              "RelativeToolTip": "docker-compose.yaml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAKgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-05-22T18:03:10.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "E:\\Dotnet-Projects\\Patient.Recovery.System\\src\\Services\\PRS.RehabilitationService\\Dockerfile",
+              "RelativeDocumentMoniker": "src\\Services\\PRS.RehabilitationService\\Dockerfile",
+              "ToolTip": "E:\\Dotnet-Projects\\Patient.Recovery.System\\src\\Services\\PRS.RehabilitationService\\Dockerfile",
+              "RelativeToolTip": "src\\Services\\PRS.RehabilitationService\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-22T13:29:18.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "E:\\Dotnet-Projects\\Patient.Recovery.System\\src\\Services\\PRS.PatientService\\Dockerfile",
+              "RelativeDocumentMoniker": "src\\Services\\PRS.PatientService\\Dockerfile",
+              "ToolTip": "E:\\Dotnet-Projects\\Patient.Recovery.System\\src\\Services\\PRS.PatientService\\Dockerfile",
+              "RelativeToolTip": "src\\Services\\PRS.PatientService\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-22T13:29:04.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "E:\\Dotnet-Projects\\Patient.Recovery.System\\src\\Services\\PRS.NotificationService\\Dockerfile",
+              "RelativeDocumentMoniker": "src\\Services\\PRS.NotificationService\\Dockerfile",
+              "ToolTip": "E:\\Dotnet-Projects\\Patient.Recovery.System\\src\\Services\\PRS.NotificationService\\Dockerfile",
+              "RelativeToolTip": "src\\Services\\PRS.NotificationService\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-22T13:28:50.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "E:\\Dotnet-Projects\\Patient.Recovery.System\\src\\Services\\PRS.MonitoringService\\Dockerfile",
+              "RelativeDocumentMoniker": "src\\Services\\PRS.MonitoringService\\Dockerfile",
+              "ToolTip": "E:\\Dotnet-Projects\\Patient.Recovery.System\\src\\Services\\PRS.MonitoringService\\Dockerfile",
+              "RelativeToolTip": "src\\Services\\PRS.MonitoringService\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-22T13:28:32.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "E:\\Dotnet-Projects\\Patient.Recovery.System\\src\\Services\\PRS.DiagnosisService\\Dockerfile",
+              "RelativeDocumentMoniker": "src\\Services\\PRS.DiagnosisService\\Dockerfile",
+              "ToolTip": "E:\\Dotnet-Projects\\Patient.Recovery.System\\src\\Services\\PRS.DiagnosisService\\Dockerfile",
+              "RelativeToolTip": "src\\Services\\PRS.DiagnosisService\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-22T13:28:15.831Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "E:\\Dotnet-Projects\\Patient.Recovery.System\\src\\Services\\PRS.AuthService\\Dockerfile",
+              "RelativeDocumentMoniker": "src\\Services\\PRS.AuthService\\Dockerfile",
+              "ToolTip": "E:\\Dotnet-Projects\\Patient.Recovery.System\\src\\Services\\PRS.AuthService\\Dockerfile",
+              "RelativeToolTip": "src\\Services\\PRS.AuthService\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-22T13:27:58.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "E:\\Dotnet-Projects\\Patient.Recovery.System\\src\\ApiGateway\\PRS.ApiGateway\\Dockerfile",
+              "RelativeDocumentMoniker": "src\\ApiGateway\\PRS.ApiGateway\\Dockerfile",
+              "ToolTip": "E:\\Dotnet-Projects\\Patient.Recovery.System\\src\\ApiGateway\\PRS.ApiGateway\\Dockerfile",
+              "RelativeToolTip": "src\\ApiGateway\\PRS.ApiGateway\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-22T13:26:59.886Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1218,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+@PRS.DiagnoosisService_HostAddress = http://localhost:5256
+
+GET {{PRS.DiagnoosisService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
